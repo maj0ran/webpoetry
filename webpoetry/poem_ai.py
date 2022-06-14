@@ -194,17 +194,18 @@ def stylize(text):
  <title>Gedichte-KI</title>
  <style>
  body {
- background-color: #2D2D2D;
+   background-image: url("background.jpg")
  }
  p {
-   color: white;
+   color: black;
    font-family: "Lucida Handwriting", cursive;
-      font-size: 32px
+   font-size: 4vw;
+   text-align: center
   }
 
     .first-letter {
-      font-size: 70px;
-      line-heigt: 100px;
+      font-size: 12vw;
+      line-height: 2vw;
     }
  </style>
 </head>
@@ -222,6 +223,7 @@ def stylize(text):
   </div>
 
 </body>
+<img src="feather.png" style="width:33vw; float:right; padding-right:20vw; margin-top:-7vw">
 </html>"""
 
     return html_doc
