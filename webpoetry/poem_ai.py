@@ -99,7 +99,7 @@ class MyModel(tf.keras.Model):
                                                      filepath=checkpoint_path,
                                                      save_weights_only=True)
 
-        EPOCHS = 10
+        EPOCHS = 500
         self.fit(self.dataset, epochs=EPOCHS, callbacks=[checkpoint_callback])
 
 
@@ -180,11 +180,11 @@ def generate_text(generator, start_string):
     return result
 
 
-#poem_gen = get_poem_generator(train_new=False)
-#result = generate_text(poem_gen, 'E')
-#print(result)
-#
-#tf.saved_model.save(poem_gen, 'poem_generator')
+poem_gen = get_poem_generator(train_new=True)
+result = generate_text(poem_gen, 'E')
+print(result)
+
+tf.saved_model.save(poem_gen, 'poem_generator')
 
 
 def stylize(text):
