@@ -180,11 +180,11 @@ def generate_text(generator, start_string):
     return result
 
 
-poem_gen = get_poem_generator(train_new=True)
-result = generate_text(poem_gen, 'E')
-print(result)
+#poem_gen = get_poem_generator(train_new=True)
+#result = generate_text(poem_gen, 'E')
+#print(result)
 
-tf.saved_model.save(poem_gen, 'poem_generator')
+#tf.saved_model.save(poem_gen, 'poem_generator')
 
 
 def stylize(text):
